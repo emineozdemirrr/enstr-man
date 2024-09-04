@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="müzik,gitar satın alma,enstrüman satın alma,piyano,davul">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sedan+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FREEDOM MÜZİK AKADEMİ</title>
+
+<style>
+
+        .container { position: relative; }
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
+        .loginBox { background: white; padding: 20px; margin: 100px auto; width: 300px; }
+
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+      :root{
+         --main-color: #ffffff;
+         --black-color: #000000;
+         border: 0.1rem solid rgba(0, 0, 0, 0.4);
+      }
+
+    *{
+        font-family: "Poppins" , sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: 0.2s ease;
+      color: #000000;
+      
+      
+    }
+
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 9rem;
+        scroll-behavior: smooth;
+    }
+    html::-webkit-scrollbar{
+        width: 0.8rem;
+        background-color: #ffffff;
+    }
+    html::-webkit-scrollbar-thumb{
+        border-radius: 3rem;
+        background-color: var(--black-color);
+    }
+    body{
+        background-color: var(--black-color);
+    }
+    section{
+        padding: 3.5rem 7%;
+    }
+    .btn{
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 2rem 3.75rem;
+      border-radius: 30rem;
+      font-size: 1.7rem;
+      color: #ffffff;
+      background-color: #000000;
+    }
+
+    .btn-login{
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        background-color: transparent;
+        outline: none;
+        transition: 5s;
+    }
+
+   
+    .btn:hover{
+        opacity: 0.7;
+    }
+    .heading{
+      color: #e70000;
+      text-transform: uppercase;
+      font-size: 4rem;
+      margin-bottom: 3.5rem;
+      border-bottom: 0.1rem solid #ffffff;
+      
+    }
+
+    .heading span{
+      text-transform: uppercase;
+       color: #ffffff;   
+    }
+
+    .search-input{
+        font-size: 1.6rem;
+        color: #000000;
+        border-radius: 3rem;
+        padding: 1rem;
+        text-transform: none;
+    }
+   
+   /*! header start */
+   .header .logo img{
+        height: 10rem;
+   }
+   .header{
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+   }
+   .header .navbar a{
+    margin: 0 2rem;
+    font-size: 1.6rem;
+    color: black;
+    border-bottom: 0.1rem solid transparent;
+   }
+   .header .navbar .active,
+   .header .navbar a:hover{
+    border-color: #000000;
+    padding-bottom: 0.5rem;
+   }
+   .icons{
+    display: inline-block;
+   }
+   .icons .spacer{
+    margin-right: 5px;
+   }
+   .header .icons{
+   cursor: pointer;
+   font-size: 2.5rem;
+   margin-left: 1.5rem;
+   margin-right: 10px;
+   background-color: transparent;
+   
+   
+   }
+   .header .icons a:hover{
+    color: #e70000;
+   }
+    
+   /*! header end */
+ 
+    .anasayfa{
+        min-height: 100vh;
+        background: url(img/Retro\ Staircase\ Wall\ Decoration\ Set\ of\ Fourteen\ _\ Aesthetic\ Decor\ Shop.jpg);
+        background-size: contain;
+        background-position: center;
+        margin-top: -14.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .anasayfa .content{
+        max-width: 100rem;
+    }
+    .anasayfa .content h3{
+        font-size: 6rem;
+        color: #ffffff;
+    }
+    .anasayfa .content p{
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.8;
+        padding: 1rem 0 ;
+        color: #f7f7f7;
+    }
+   
+    .Satanlar .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+    }
+    .Satanlar .box-container .box{
+        padding: 3rem;
+        background-color: #fffcfc;
+        border-radius: 3rem;
+        background-color: #ffffff;
+        min-height: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+   .Satanlar .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+   }
+   .Satanlar .box-container .box .satanlar-category{
+    font-size: 1.2rem;
+    text-transform: lowercase;
+   }
+    .Satanlar .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+   }
+   .Satanlar .box-container .box .price{
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: red;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   .Satanlar .box-container .box .price span{
+    text-decoration: line-through;
+    font-size: 1rem;
+    font-weight: 300;
+   }
+
+   .footer{
+    background-color: rgb(10, 10, 10);
+    text-align: center;
+   }
+
+   .footer .search{
+    display: flex;
+    justify-content: center;
+   }
+
+   .footer .search .search-input{
+    width: 30rem;
+   }
+
+   .footer .search .btn-primary{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+   }
+
+   .footer .share{
+    padding: 2rem 0;
+   }
+
+   .footer .share a{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #ffffff;
+    font-size: 2rem;
+    border: var(--border);
+    border-radius: 50%;
+    margin: 0.3rem;
+   }
+
+   .footer .share a:hover{
+    background-color: var(--black-color);
+   }
+
+   .footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+   }
+
+   .footer .links a {
+    background-color: var(--main-color);
+    padding: 0.7rem 2rem;
+    color: #000000;
+    font-size: 2rem;
+    border: var(--border);
+   border-radius: 5rem;
+    margin-left: 1rem;
+   }
+
+   .footer .credit{
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 300;
+    padding-top: 1.5rem;
+   }   
+
+   .footer .credit span{
+    color: #e70000;
+   }  
+
+   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.loginBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff6f6;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.loginBox h2 {
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    margin-bottom: 20px;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.giris{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.closeBtn {
+    background-color: #ff0000;
+    color: #000000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginBtn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+            padding: 4rem 7%;
+            max-width: 120rem;
+            margin: auto;
+        }
+        .content h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .content p {
+            color: antiquewhite;
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .programs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .program {
+            background-color: #3100c4;
+            color: #000000;
+            border-radius: 1rem;
+            padding: 2rem;
+            flex: 1 1 calc(25% - 2rem); /* Keman dersi eklenince 4 sütun olacak şekilde */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: rotateX(0deg) rotateY(0deg);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .program:hover {
+            transform: rotateX(10deg) rotateY(10deg);
+            box-shadow: 0 12px 24px rgba(255, 255, 255, 0.999);
+        }
+        .program h2 {
+            font-size: 2rem;
+            color: var(--highlight-color);
+            margin-bottom: 1rem;
+        }
+        .program p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+
+
+</style>
+</head>
+<body>
+
+   
+
+    <!--!  header section start -->
+    <header class="header">
+       <a href="index.html" class="logo">
+        <img src="./img/Freedom Music.png" alt="yüklenemedi.">
+       </a>
+       <nav class="navbar">
+        <a href="index.html" target="_blank">ANA SAYFA</a>
+        
+        <li class="dropdown">
+            <a href="kategori.html" class="dropbtn">KATEGORİLER</a>
+            <div class="dropdown-content">
+                <a href="akustikg.html">Akustik Gitar</a>
+                <a href="piyano.html">Piyano</a>
+                <a href="keman.html" target="_blank">Keman</a>
+                <a href="davul.html">Davul</a>
+                <a href="elektrog.html">Elektro Gitar</a>
+               
+            </div>
+        </li>
+        <a href="akademi.html" class="active">FREEDOM AKADEMİ</a>
+        <a href="hakkımızda.html">HAKKIMIZDA</a>
+       </nav>
+
+       
+       <div class="icons">
+        <a href="sepet.html"  class="fas fa-cart-shopping"></a>
+        <span class="spacer"></span>
+        <a href="bak%C4%B1m.html" target="_blank" class="fa-solid fa-screwdriver-wrench"></a>
+        <a href="iade.html" class="fa-solid fa-handshake"></a>
+
+       </div>
+
+   
+
+       <div class="container">
+        <button id="loginBtn">Giriş</button>
+        
+        <div class="overlay" id="overlay">
+            <div class="loginBox">
+                <h2>Giriş</h2>
+                <form id="loginForm">
+                    <div class="inputBox">
+                        <input type="text" name="username" id="username" required>
+                        <label>Kullanıcı Adı</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" name="password" id="password" required>
+                        <label>Şifre</label>
+                    </div>
+                    <input class="giris" type="submit" value="Giriş Yap">
+                </form>
+                <button class="closeBtn" id="closeBtn">Kapat</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'block';
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'none';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('login.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `username=${username}&password=${password}`
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === 'success') {
+                    alert('Giriş başarılı!');
+                    // Redirect to another page or perform other actions on successful login
+                } else {
+                    alert('Kullanıcı adı veya şifre yanlış.');
+                }
+            });
+        });
+    </script>
+
+    </header>
+   <!--! header section end -->
+  
+   <div class="content">
+    <h1>Freedom Akademi</h1>
+    <p>
+        Freedom Akademi, müzik tutkunlarına çeşitli enstrümanlar ve müzik teorisi hakkında kapsamlı eğitimler sunan bir platformdur. Amacımız, her seviyedeki öğrencimize en iyi eğitim deneyimini sunarak müzikal yeteneklerini geliştirmelerine yardımcı olmaktır.
+    </p>
+    <p>
+        Akademimizde, deneyimli eğitmenler tarafından verilen bireysel ve grup dersleri ile müzik dünyasında kendinizi daha da geliştirebilirsiniz. Eğitimlerimiz, başlangıç seviyesinden ileri seviyeye kadar geniş bir yelpazeyi kapsamaktadır.
+    </p>
+    <div class="programs">
+        <div class="program">
+            <h2>Gitar Dersleri</h2>
+            <p>
+                Akustik ve elektro gitar dersleri ile gitar çalma becerilerinizi geliştirin. Hem yeni başlayanlar hem de ileri seviyedeki öğrenciler için uygun programlar mevcuttur.
+            </p>
+        </div>
+        <div class="program">
+            <h2>Piyano Dersleri</h2>
+            <p>
+                Piyano çalma tekniklerinizi ilerletmek ve müzik teorisi bilgilerinizi artırmak için bireysel piyano derslerimizden faydalanabilirsiniz.
+            </p>
+        </div>
+        <div class="program">
+            <h2>Davul Dersleri</h2>
+            <p>
+                Davul çalma becerilerinizi geliştirebileceğiniz, ritim ve tempo konularında uzman eğitmenlerle yapacağınız dersler.
+            </p>
+        </div>
+        <div class="program">
+            <h2>Vokal Eğitimleri</h2>
+            <p>
+                Şarkı söyleme yeteneklerinizi geliştirmek ve ses eğitiminizi ilerletmek için profesyonel vokal derslerimizden yararlanabilirsiniz.
+            </p>
+        </div>
+        <div class="program">
+            <h2>Keman Dersleri</h2>
+            <p>
+                Keman çalma becerilerinizi geliştirmek ve müzikal ifade yeteneğinizi artırmak için bireysel keman derslerimiz mevcuttur.
+            </p>
+        </div>
+    </div>
+</div>
+
+   <section class="footer">
+   
+    <div class="share">
+      <a href="https://www.facebook.com/pages/create/?ref_type=registration_form" class="fab fa-facebook"></a>
+      <a href="https://x.com/?lang=tr" class="fab fa-twitter"></a>
+      <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+      <a href="https://www.linkedin.com/feed/?trk=hb_signin" class="fab fa-linkedin"></a>
+      <a href="https://tr.pinterest.com/" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="kategori.html">Kategoriler</a>
+        <a href="akademi.html" class="active" >Freedom Akademi</a>
+        <a href="hakkımızda.html">Hakkımızda</a>
+    </div>
+
+    <div class="credit">
+        Bu proje <span>Freedom Muzik</span> tarafından oluşturulmuştur tüm hakları saklıdır.
+    </div>
+
+   </section>
+
+   
+
+</body>
+</html>

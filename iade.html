@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sedan+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+<title>İade Formu</title>
+
+<style>
+  .container { position: relative; }
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
+        .loginBox { background: white; padding: 20px; margin: 100px auto; width: 300px; }
+
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+      :root{
+         --main-color: #ffffff;
+         --black-color: #000000;
+         border: 0.1rem solid rgba(0, 0, 0, 0.4);
+      }
+
+    *{
+        font-family: "Poppins" , sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: 0.2s ease;
+      color: #000000;
+      
+      
+    }
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  animation: arkaPlanRenkDegistir 10s linear infinite alternate;
+}
+
+@keyframes arkaPlanRenkDegistir {
+  0% {
+    background-color: #44449c; /* Başlangıç rengi */
+  }
+  50% {
+    background-color: rgb(109, 176, 97); /* Orta renk */
+  }
+  100% {
+    background-color: rgb(197, 78, 65); /* Bitiş renk */
+  }
+}
+
+h1, h2 {
+  color: #333;
+}
+
+
+
+
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 9rem;
+        scroll-behavior: smooth;
+    }
+    html::-webkit-scrollbar{
+        width: 0.8rem;
+        background-color: #ffffff;
+    }
+    html::-webkit-scrollbar-thumb{
+        border-radius: 3rem;
+        background-color: var(--black-color);
+    }
+    body{
+        background-color: var(--black-color);
+    }
+    section{
+        padding: 3.5rem 7%;
+    }
+    .btn{
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 2rem 3.75rem;
+      border-radius: 30rem;
+      font-size: 1.7rem;
+      color: #ffffff;
+      background-color: #000000;
+    }
+
+    .btn-login{
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        background-color: transparent;
+        outline: none;
+        transition: 5s;
+    }
+
+   
+    .btn:hover{
+        opacity: 0.7;
+    }
+    .heading{
+      color: #e70000;
+      text-transform: uppercase;
+      font-size: 4rem;
+      margin-bottom: 3.5rem;
+      border-bottom: 0.1rem solid #ffffff;
+      
+    }
+
+    .heading span{
+      text-transform: uppercase;
+       color: #ffffff;   
+    }
+
+    .search-input{
+        font-size: 1.6rem;
+        color: #000000;
+        border-radius: 3rem;
+        padding: 1rem;
+        text-transform: none;
+    }
+   
+   /*! header start */
+   .header .logo img{
+        height: 10rem;
+   }
+   .header{
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+   }
+   .header .navbar a{
+    margin: 0 2rem;
+    font-size: 1.6rem;
+    color: black;
+    border-bottom: 0.1rem solid transparent;
+   }
+   .header .navbar .active,
+   .header .navbar a:hover{
+    border-color: #000000;
+    padding-bottom: 0.5rem;
+   }
+   .icons{
+    display: inline-block;
+   }
+   .icons .spacer{
+    margin-right: 5px;
+   }
+   .header .icons{
+   cursor: pointer;
+   font-size: 2.5rem;
+   margin-left: 1.5rem;
+   margin-right: 10px;
+   background-color: transparent;
+   
+   
+   }
+   .header .icons a:hover{
+    color: #e70000;
+   }
+
+   
+
+.conta {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#thankYou {
+  text-align: center;
+  margin-top: 20px;
+  color: #009900;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.loginBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff6f6;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.loginBox h2 {
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    margin-bottom: 20px;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.giris{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.closeBtn {
+    background-color: #ff0000;
+    color: #000000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginBtn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#iadeSartlari {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#iadeSartlari h2 {
+  font-size: 24px;
+  color: #000000;
+}
+
+
+
+#iadeSartlari ul li {
+  margin-bottom: 10px;
+  list-style-position: inside;
+  font-size: 18px;
+color: #333;
+}
+
+</style>
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+         <img src="./img/Freedom Music.png" alt="yüklenemedi.">
+        </a>
+        <nav class="navbar">
+         <a href="index.html" target="_blank">ANA SAYFA</a>
+         
+         <li class="dropdown">
+             <a href="kategori.html" class="dropbtn">KATEGORİLER</a>
+             <div class="dropdown-content">
+                 <a href="akustikg.html">Piyano</a>
+                 <a href="keman.html" target="_blank">Keman</a>
+                 <a href="davul.html">Davul</a>
+                 <a href="elektrog.html">Elektro Gitar</a>
+                 
+             </div>
+         </li>
+         <a href="akademi.html" class="">FREEDOM AKADEMİ</a>
+         <a href="hakkımızda.html" class="">HAKKIMIZDA</a>
+        </nav>
+ 
+        
+        <div class="icons">
+         <a href="sepet.html"  class="fas fa-cart-shopping"></a>
+         <span class="spacer"></span>
+         <a href="bak%C4%B1m.html" target="_blank" class="fa-solid fa-screwdriver-wrench"></a>
+         <a href="iade.html" class="fa-solid fa-handshake"></a>
+
+        </div>
+ 
+    
+ 
+        <div class="container">
+         <button id="loginBtn">Giriş</button>
+         
+         <div class="overlay" id="overlay">
+             <div class="loginBox">
+                 <h2>Giriş</h2>
+                 <form id="loginForm">
+                     <div class="inputBox">
+                         <input type="text" name="username" id="username" required>
+                         <label>Kullanıcı Adı</label>
+                     </div>
+                     <div class="inputBox">
+                         <input type="password" name="password" id="password" required>
+                         <label>Şifre</label>
+                     </div>
+                     <input class="giris" type="submit" value="Giriş Yap">
+                 </form>
+                 <button class="closeBtn" id="closeBtn">Kapat</button>
+             </div>
+         </div>
+     </div>
+     
+     <script>
+         document.getElementById('loginBtn').addEventListener('click', function() {
+             document.getElementById('overlay').style.display = 'block';
+         });
+ 
+         document.getElementById('closeBtn').addEventListener('click', function() {
+             document.getElementById('overlay').style.display = 'none';
+         });
+ 
+         document.getElementById('loginForm').addEventListener('submit', function(e) {
+             e.preventDefault();
+             const username = document.getElementById('username').value;
+             const password = document.getElementById('password').value;
+ 
+             fetch('login.php', {
+                 method: 'POST',
+                 headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                 },
+                 body: `username=${username}&password=${password}`
+             })
+             .then(response => response.text())
+             .then(data => {
+                 if (data === 'success') {
+                     alert('Giriş başarılı!');
+                     // Redirect to another page or perform other actions on successful login
+                 } else {
+                     alert('Kullanıcı adı veya şifre yanlış.');
+                 }
+             });
+         });
+     </script>
+ 
+     </header>
+
+<div class="conta">
+  <h2>Ürün İade Formu</h2>
+  <form id="returnForm">
+    <div class="form-group">
+        <label for="adSoyad">Ad Soyad:</label>
+        <input type="text" id="adSoyad" name="adSoyad" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    <div class="form-group">
+      <label for="productName">Ürün Adı:</label>
+      <input type="text" id="productName" name="productName" required>
+    </div>
+    <div class="form-group">
+      <label for="reason">İade Nedeni:</label>
+      <textarea id="reason" name="reason" required></textarea>
+    </div>
+    <button type="submit">Gönder</button>
+  </form>
+  <div id="thankYou" style="display: none;">
+    <p>İade talebiniz alındı. Teşekkür ederiz!</p>
+  </div>
+</div>
+
+<script>
+    document.getElementById('returnForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  document.getElementById('returnForm').style.display = 'none';
+  document.getElementById('thankYou').style.display = 'block';
+});
+
+</script>
+
+<div id="iadeSartlari">
+    <h2>İade Şartları</h2>
+    <ul>
+      <li>İade talepleri, ürünün teslim alındığı tarihten itibaren 30 gün içerisinde yapılmalıdır.</li>
+      <li>İade edilecek ürün, kullanılmamış ve orijinal ambalajında olmalıdır.</li>
+      <li>İade işlemleri, ilgili departmanımız tarafından incelendikten sonra onaylanır.</li>
+    </ul>
+  </div>
+</body>
+</html>

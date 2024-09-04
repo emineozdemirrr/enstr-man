@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="müzik,gitar satın alma,enstrüman satın alma,piyano,davul">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sedan+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FREEDOM MÜZİK DAVUL SAYFASI</title>
+
+<style>
+      
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+      :root{
+         --main-color: #ffffff;
+         --black-color: #000000;
+         border: 0.1rem solid rgba(0, 0, 0, 0.4);
+      }
+
+    *{
+        font-family: "Poppins" , sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: 0.2s ease;
+      color: #000000;
+      
+      
+    }
+
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 9rem;
+        scroll-behavior: smooth;
+    }
+    html::-webkit-scrollbar{
+        width: 0.8rem;
+        background-color: #ffffff;
+    }
+    html::-webkit-scrollbar-thumb{
+        border-radius: 3rem;
+        background-color: var(--black-color);
+    }
+    body{
+        background-color: var(--black-color);
+    }
+    section{
+        padding: 3.5rem 7%;
+    }
+    .btn{
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 2rem 3.75rem;
+      border-radius: 30rem;
+      font-size: 1.7rem;
+      color: #ffffff;
+      background-color: #000000;
+    }
+
+    .btn-login{
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        background-color: transparent;
+        outline: none;
+        transition: 5s;
+    }
+
+   
+    .btn:hover{
+        opacity: 0.7;
+    }
+    .heading{
+      color: #3208dc;
+      text-transform: uppercase;
+      font-size: 4rem;
+      margin-bottom: 3.5rem;
+      border-bottom: 0.1rem solid #ffffff;
+      
+    }
+
+    .heading span{
+      text-transform: uppercase;
+       color: #ffffff;   
+    }
+
+    .search-input{
+        font-size: 1.6rem;
+        color: #000000;
+        border-radius: 3rem;
+        padding: 1rem;
+        text-transform: none;
+    }
+   
+   /*! header start */
+   .header .logo img{
+        height: 10rem;
+   }
+   .header{
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+   }
+   .header .navbar a{
+    margin: 0 2rem;
+    font-size: 1.6rem;
+    color: black;
+    border-bottom: 0.1rem solid transparent;
+   }
+   .header .navbar .active,
+   .header .navbar a:hover{
+    border-color: #000000;
+    padding-bottom: 0.5rem;
+   }
+   .icons{
+    display: inline-block;
+   }
+   .icons .spacer{
+    margin-right: 5px;
+   }
+   .header .icons{
+   cursor: pointer;
+   font-size: 2.5rem;
+   margin-left: 1.5rem;
+   margin-right: 10px;
+   background-color: transparent;
+   
+   
+   }
+   .header .icons a:hover{
+    color: #e70000;
+   }
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.loginBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff6f6;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.loginBox h2 {
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    margin-bottom: 20px;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.giris{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.closeBtn {
+    background-color: #ff0000;
+    color: #000000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginBtn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.Satanlar .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+    }
+    .Satanlar .box-container .box{
+        padding: 3rem;
+        background-color: #fffcfc;
+        border-radius: 3rem;
+        background-color: #ffffff;
+        min-height: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+   .Satanlar .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+   }
+   .Satanlar .box-container .box .satanlar-category{
+    font-size: 1.2rem;
+    text-transform: lowercase;
+   }
+    .Satanlar .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+   }
+   .Satanlar .box-container .box .price{
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   .Satanlar .box-container .box .price span{
+    text-decoration: line-through;
+    font-size: 1rem;
+    font-weight: 300;
+   }
+
+</style>
+</head>
+<body>
+
+   
+
+    <!--!  header section start -->
+    <header class="header">
+       <a href="index.html" class="logo">
+        <img src="./img/Freedom Music.png" alt="yüklenemedi.">
+       </a>
+       <nav class="navbar">
+        <a href="index.html" target="_blank" >ANA SAYFA</a>
+        
+        <li class="dropdown">
+            <a href="kategori.html" class="dropbtn + active">KATEGORİLER</a>
+            <div class="dropdown-content">
+                <a href="file:///C:/xampp/htdocs/WEB/akustikg.html">Akustik Gitar</a>
+                <a href="file:///C:/xampp/htdocs/WEB/piyano.html">Piyano</a>
+                <a href="file:///C:/xampp/htdocs/WEB/keman.html">Keman</a>
+                <a href="file:///C:/xampp/htdocs/WEB/davul.html" class="active">Davul</a>
+                <a href="file:///C:/xampp/htdocs/WEB/elektrog.html">Elektro Gitar</a>
+                
+            </div>
+        </li>
+        <a href="akademi.html" class="">FREEDOM AKADEMİ</a>
+        <a href="hakkımızda.html" class="">HAKKIMIZDA</a>
+       </nav>
+
+       
+       <div class="icons">
+        <a href="sepet.html"  class="fas fa-cart-shopping"></a>
+        <span class="spacer"></span>
+        <a href="bak%C4%B1m.html" target="_blank" class="fa-solid fa-screwdriver-wrench"></a>
+        <a href="iade.html" class="fa-solid fa-handshake"></a>
+
+       </div>
+
+   
+
+       <div class="container">
+    
+        <button id="loginBtn">Giriş</button>
+        
+        <div class="overlay" id="overlay">
+            <div class="loginBox">
+                <h2>Giriş</h2>
+                <form>
+                    <div class="inputBox">
+                        <input type="text" name="username" required>
+                        <label>Kullanıcı Adı</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" name="password" required>
+                        <label>Şifre</label>
+                    </div>
+                    <input class="giris" type="submit" value="Giriş Yap">
+                </form>
+                <button class="closeBtn" id="closeBtn">Kapat</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+    
+        loginBtn.addEventListener('click', function() {
+            overlay.style.display = 'block';
+        });
+    
+        closeBtn.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    </script>
+
+    </header>
+    
+    <section class="Satanlar">
+        <h1 class="heading">EN İYİ <span>Davullar</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/175429165358STH6_CSS.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">Tama Davul</span>
+                    <h3>TAMA ST50H6-CSS Stagestar Cosmic Silver Sparkle 5 Parça (20B/10T/12T/14F/14S) Aksamlı Akustik Davul Seti</h3>
+                    <div class="price">17.600 TL</div>
+                  
+                </div>
+                <div class="box-bottom">
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/131613FCP0803-BL_1.png" alt="yüklenemedi">
+                   <span class="satanlar-category">focus davul</span>
+                    <h3>FOCUS FCP0803-BL - 5 Parça (20B/10T/12T/14F/14S) Aksamlı & Zilli Mavi Akustik Davul Seti</h3>
+                    <div class="price">8.500 TL</div>
+                   
+                </div>
+                <div class="box-bottom">
+                    
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/144339ML42HLZBNS-SAP_1.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">tama davul</span>
+                    <h3>TAMA ML42HLZBNS-SAP - Superstar Hyper-Drive 'Satin Arctic Pearl' 4 Parça (22B/10T/12T/16F) Akustik Davul Seti</h3>
+                    <div class="price">34.300 TL</div>
+                   
+                </div>
+                <div class="box-bottom">
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/174645Pearl-RFP924XFP-C335-Reference-P_81346_1.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">pearl davul</span>
+                    <h3>PEARL RFP924XFP/C335 - Reference Pure Black Cherry 4 Parça (22B/10T/12T/14F) Akustik Davul Seti</h3>
+                    <div class="price">110.300 TL</div>
+                  
+                </div>
+                <div class="box-bottom">
+                    
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/112557ST50H6CSCP.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">tama davul</span>
+                    <h3>TAMA ST50H6C-SCP Stagestar Scorched Copper Sparkle 5 Parça (20B/10T/12T/14F/14S) Aksamlı ve Zilli Akustik Davul Seti</h3>
+                    <div class="price">22.900 TL</div>
+                  
+                </div>
+                <div class="box-bottom">
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/144833ST50H6CLGS_LGE.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">tama davul</span>
+                    <h3>TAMA ST50H6C-LGS Stagestar Lime Green Sparkle 5 Parça (20B/10T/12T/14F/14S) Aksamlı ve Zilli Akustik Davul Seti</h3>
+                    <div class="price">20.500 TL</div>
+                   
+                </div>
+                <div class="box-bottom">
+                    
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/163941RS505BCC31.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">pearl davul</span>
+                    <h3>PEARL RS505BC/C31 Roadshow Aksamlı ve Zilli Akustik Davul Seti</h3>
+                    <div class="price">52.995 TL</div>
+                   
+                </div>
+                <div class="box-bottom">
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/155124MCT924XEPC837_1.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">pearl davul</span>
+                    <h3>PEARL MCT924XEP/C837 Masters Maple Complete Chrome Contrail 4 Parça (22B/10T/12T/16F) Akustik Davul Seti</h3>
+                    <div class="price">53.300 TL</div>
+                  
+                </div>
+                <div class="box-bottom">
+                    
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/113214ST50H6CSEM.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">tama davul</span>
+                    <h3>TAMA ST50H6C-SEM Stagestar Sea Blue Mist 5 Parça (20B/10T/12T/14F/14S) Aksamlı ve Zilli Akustik Davul Seti</h3>
+                    <div class="price">15.200 TL</div>
+                  
+                </div>
+                <div class="box-bottom">
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/131613FCP0803-BL_1.png" alt="yüklenemedi">
+                   <span class="satanlar-category">focus davul</span>
+                    <h3>FOCUS FCP0803-BL - 5 Parça (20B/10T/12T/14F/14S) Aksamlı & Zilli Mavi Akustik Davul Seti</h3>
+                    <div class="price">9.500 TL</div>
+                   
+                </div>
+                <div class="box-bottom">
+                    
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/144823STS904XPC103_1.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">pearl davul </span>
+                    <h3>PEARL STS904XP/C103 - Session Studio Select "Piano Black" 4 Parça (20B/10T/12T/14F) Akustik Davul Seti</h3>
+                    <div class="price">45.995 TL</div>
+                   
+                </div>
+                <div class="box-bottom">
+                  <a href="sepet.html*" class="btn">Kirala</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-head">
+                   <img src="https://img-zuhalmuzik.mncdn.com/mnresize/700/700/images/product/Pearl-MRV904XEP-C354-Masters-Map_81347_3.jpg" alt="yüklenemedi">
+                   <span class="satanlar-category">pearl davul</span>
+                    <h3>PEARL MRV904XEP/C354 - Masters Maple Reserve Saphire Bordeaux Sparkle 4 Parça (20B/10T/12T/14F) Akustik Davul Seti</h3>
+                    <div class="price">72.700 TL</div>
+                  
+                </div>
+                <div class="box-bottom">
+                    
+                  <a href="sepet.html" class="btn">Kirala</a>
+                </div>
+            </div>
+        </div>
+       </section>
+        
+    </body>
+    </html>
